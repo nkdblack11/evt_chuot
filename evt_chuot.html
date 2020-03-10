@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sự kiện chuột</title>
+</head>
+<body>
+<form>
+    <div align="center">
+        <img id="img" src="1e36b4bcd300c22596d8f8619666295d.jpg" style="width:300px;height: 300px"/>
+        <p>Nhấn vào nút bên dưới để di chuyển hình ảnh sang phải</p>
+        <input type="button" value="Click Me" onclick="CanPhai();"/>
+    </div>
+    <script language="JavaScript">
+        let imObj = null
+        imObj = document.getElementById('img')
+        function init() {
+            imgObj = document.getElementById('img');
+            imgObj.style.position = 'relative';
+            imgObj.style.right = '0px';
+        }
+        function CanPhai() {
+            imgObj.style.right = parseInt(imgObj.style.right) + 10 + 'px';
+        }
+        window.onload = init;
+    </script>
+</form>
+</body>
+</html>
